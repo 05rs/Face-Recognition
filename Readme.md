@@ -32,13 +32,25 @@ End to End Face-Recognition follows the approach described in [[1]](https://arxi
  
 ## `Evaluation Pipeline` 
 
-  - Used SVM,KNN,gnb
+  - Used Support Vector Machine (SVM), K Nearest Neighbour (KNN), Gaussian Naive Bayes (gnb) for inference.
   
+    - Distance Threshold using `pretrained model` on subset of LFW Dataset.
+    
+    ![Distance Threshold](FaceNet/media/distance_thresh_pre.png)
+    
+    - Distance Threshold using `pretrained model and fine-tuning` on subset of LFW Dataset.
+    
     ![Distance Threshold](FaceNet/media/distance_thresh.png)
     
   - t-distributed Stochastic Neighbor Embedding (t-SNE) is applied to the 128-dimensional embedding vectors.
   
-    ![t-SNE](FaceNet/media/t_SNE.png)
+    - t-SNE of `pretrained model` on subset of LFW Dataset
+  
+      ![t-SNE](FaceNet/media/t-SNE_pre.png)
+      
+    - t-SNE of `pretrained model and fine-tuning` on subset of LFW Dataset
+  
+      ![t-SNE](FaceNet/media/t-SNE.png)
   
   
 ###  Status
